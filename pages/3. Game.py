@@ -51,7 +51,7 @@ lit.subheader(
 
 # user inputs for playing the game
 lit.session_state.guess_beds = lit.text_input('Guess the # of bedrooms, ex. 2')
-lit.session_state.guess_baths = lit.text_input('Guess the # of bedrooms, ex. 1')
+lit.session_state.guess_baths = lit.text_input('Guess the # of bathrooms, ex. 1')
 
 # to submit the answer
 submit = lit.button('Press to Submit!')
