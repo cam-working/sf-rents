@@ -8,13 +8,13 @@ view = lit.sidebar.radio('View either gas prices or rent and how buying power sh
 
 # based on selection download one of two dataframes
 if view == 'Gas':
-    df = pd.read_pickle('Pages/data/gas_dat_pickle.pkl')
+    df = pd.read_pickle('pages/data/gas_dat_pickle.pkl')
     df['side_length'] = df['max_price_r'] ** (1 / 2)
     df['shift_plt'] = (1 - df['side_length']) / 2
     lit.header("Same Money, Less GasSquare-Footage")
     lit.subheader("Relative Purchasing Power of 2011's Price Per Gallon Over the Next Decade")
 elif view == 'Rent':
-    df = pd.read_pickle('Pages/data/full_year_dat_pickle.pkl')
+    df = pd.read_pickle('pages/data/full_year_dat_pickle.pkl')
     df['side_length'] = df['ppsf_i'] ** (1 / 2)
     df['shift_plt'] = (1 - df['side_length']) / 2
     lit.header("Same Money, Less Square-Footage")
