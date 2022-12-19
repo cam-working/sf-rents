@@ -24,7 +24,7 @@ lit.write("Now that you've been primed on some specific cases with the map,\n"
 # non-standard function, basically wraps a series of data frame actions so they play nicely with streamlit
 @lit.cache()
 def get_df():
-    df = pd.read_pickle('Pages/data/game_df_pickle.pkl')
+    df = pd.read_pickle('pages/data/game_df_pickle.pkl')
     df1 = df[['year', 'nhood', 'beds', 'baths', 'sqft', 'price_adjusted']].copy(deep=True)
     df2 = df1.astype(str).copy(deep=True)
     df3 = df2[df2['baths'].str[2].eq('0')].copy(deep=True)
