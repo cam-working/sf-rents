@@ -5,7 +5,7 @@ import folium
 from streamlit_folium import st_folium as lit_folium
 
 # load the data, only data with non-null latitude and longitude
-df = pd.read_pickle('Pages/data/df_ll_pickle.pkl')
+df = pd.read_pickle('pages/data/df_ll_pickle.pkl')
 
 # get a list of years and sort
 list_of_years = df.year.unique().tolist()
